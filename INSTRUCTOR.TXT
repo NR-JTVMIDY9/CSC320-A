@@ -2,3 +2,10 @@ Phillip Madden
 xnamp@hotmail.com
 
 https://github.com/NR-JTVMIDY9/CSC320-A
+
+SOLID
+(S)ingle-Responsibility
+(O)pen-Closed
+(L)iskov Substitution
+(I)
+(D)
