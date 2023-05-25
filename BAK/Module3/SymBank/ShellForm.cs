@@ -1,21 +1,35 @@
 ﻿using SymBank.Properties;
 using Symbion;
 using System;
-using System.Globalization;
+using System.Collections.Generic;
 using System.Security.Principal;
 using System.Threading;
 using System.Windows.Forms;
 
 namespace SymBank {
 	public partial class ShellForm : Form, IShell {
+
+		private Dictionary<string, IActionSite> _sites;
+
+
 		public ShellForm() {
 			InitializeComponent();
+			_sites = new Dictionary<string, IActionSite>();
+			_sites.Add("FileMenu", new MenuActionSite(mnuFile));
+			_sites.Add("ToolsMenu", new MenuActionSite(mnuTools));
+			_sites.Add("Toolbar", new ToolbarActionSite(tbrMain));
+			_sites["FileMenu"].Add(ApplicationCommands.Exit);
+			_sites["Toolbar"].Add(ApplicationCommands.Exit);
+		}
+
+		public Dictionary<string, IActionSite> Sites {
+			get { return _sites; }
 		}
 
 		private SplashScreen frmSplash;
 
+
 		private void ShellForm_Load(object sender, EventArgs e) {
-			Resources.Culture = CultureInfo.CurrentCulture;
 			frmSplash = new SplashScreen();
 			frmSplash.Show();
 			AppDomain.CurrentDomain.SetPrincipalPolicy(PrincipalPolicy.WindowsPrincipal);
@@ -63,6 +77,5 @@ namespace SymBank {
 				else frmSplash.Status = value;
 			}
 		}
-
 	}
 }

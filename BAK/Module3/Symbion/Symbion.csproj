@@ -30,7 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <SignAssembly>false</SignAssembly>
+    <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>Properties\Symbion.pfx</AssemblyOriginatorKeyFile>
@@ -39,6 +39,8 @@
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,11 +49,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationCommands.cs" />
     <Compile Include="BaseLogger.cs" />
     <Compile Include="BaseModule.cs" />
     <Compile Include="BaseService.cs" />
+    <Compile Include="Command.cs" />
     <Compile Include="DebugHelper.cs" />
     <Compile Include="DebugLogger.cs" />
+    <Compile Include="IActionSite.cs" />
     <Compile Include="IAuthorization.cs" />
     <Compile Include="ILogger.cs" />
     <Compile Include="IModule.cs" />
@@ -60,6 +65,7 @@
     <Compile Include="IShell.cs" />
     <Compile Include="LoggerFactory.cs" />
     <Compile Include="LogType.cs" />
+    <Compile Include="MenuActionSite.cs" />
     <Compile Include="ModuleItem.cs" />
     <Compile Include="ModuleList.cs" />
     <Compile Include="ModuleLoader.cs" />
@@ -72,6 +78,7 @@
     </Compile>
     <Compile Include="ServiceAttribute.cs" />
     <Compile Include="ServiceRepository.cs" />
+    <Compile Include="ToolbarActionSite.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\Symbion.pfx" />
@@ -81,6 +88,9 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
