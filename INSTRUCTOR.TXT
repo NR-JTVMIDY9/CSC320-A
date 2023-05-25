@@ -7,5 +7,5 @@ SOLID
 (S)ingle-Responsibility
 (O)pen-Closed
 (L)iskov Substitution
-(I)
+(I)nterface Segregation
 (D)

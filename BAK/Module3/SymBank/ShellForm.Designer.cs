@@ -34,28 +34,29 @@
 			this.sbrMain.ImageScalingSize = new System.Drawing.Size(20, 20);
 			this.sbrMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblStatus});
-			this.sbrMain.Location = new System.Drawing.Point(0, 220);
+			this.sbrMain.Location = new System.Drawing.Point(0, 357);
 			this.sbrMain.Name = "sbrMain";
+			this.sbrMain.Padding = new System.Windows.Forms.Padding(2, 0, 21, 0);
 			this.sbrMain.RenderMode = System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode;
-			this.sbrMain.Size = new System.Drawing.Size(282, 33);
+			this.sbrMain.Size = new System.Drawing.Size(423, 38);
 			this.sbrMain.TabIndex = 0;
 			// 
 			// lblStatus
 			// 
 			this.lblStatus.Name = "lblStatus";
 			this.lblStatus.Padding = new System.Windows.Forms.Padding(4);
-			this.lblStatus.Size = new System.Drawing.Size(228, 28);
+			this.lblStatus.Size = new System.Drawing.Size(338, 33);
 			this.lblStatus.Spring = true;
-			this.lblStatus.Text = "Ready";
 			this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// ShellForm
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(282, 253);
+			this.ClientSize = new System.Drawing.Size(423, 395);
 			this.Controls.Add(this.sbrMain);
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+			this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.Name = "ShellForm";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "SymBank";

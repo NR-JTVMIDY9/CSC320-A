@@ -36,7 +36,7 @@
     <ApplicationIcon>Properties\SymBank.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <SignAssembly>true</SignAssembly>
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>Properties\SymBank.pfx</AssemblyOriginatorKeyFile>

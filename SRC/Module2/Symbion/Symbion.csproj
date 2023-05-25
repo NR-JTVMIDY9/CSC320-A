@@ -4,12 +4,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A389187A-69E5-4567-9C4A-7BC1C2D4CE6D}</ProjectGuid>
+    <ProjectGuid>{CC1F703A-CDE7-446E-A2F2-846F53B0C012}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SymBank.Banking</RootNamespace>
-    <AssemblyName>SymBank.Banking</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <RootNamespace>Symbion</RootNamespace>
+    <AssemblyName>Symbion</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -29,16 +29,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <SignAssembly>false</SignAssembly>
-  </PropertyGroup>
-  <PropertyGroup>
-    <AssemblyOriginatorKeyFile>Properties\SymBank.pfx</AssemblyOriginatorKeyFile>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,49 +41,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BankingModule.cs" />
-    <Compile Include="Controllers\BankingController.cs" />
-    <Compile Include="Models\SymBank.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SymBank.dbml</DependentUpon>
-    </Compile>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>Settings.settings</DependentUpon>
-    </Compile>
-    <Compile Include="Services\IAsyncAccountController.cs" />
-    <Compile Include="Services\IAccountController.cs" />
-    <Compile Include="Services\ITransactionController.cs" />
+    <Compile Include="BaseLogger.cs" />
+    <Compile Include="BaseModule.cs" />
+    <Compile Include="BaseService.cs" />
+    <Compile Include="DebugHelper.cs" />
+    <Compile Include="DebugLogger.cs" />
+    <Compile Include="IAuthorization.cs" />
+    <Compile Include="ILogger.cs" />
+    <Compile Include="IModule.cs" />
+    <Compile Include="InjectAttribute.cs" />
+    <Compile Include="IService.cs" />
+    <Compile Include="LoggerFactory.cs" />
+    <Compile Include="LogType.cs" />
+    <Compile Include="ModuleItem.cs" />
+    <Compile Include="ModuleList.cs" />
+    <Compile Include="ModuleLoader.cs" />
+    <Compile Include="PrincipalAuthorization.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Symbion\Symbion.csproj">
-      <Project>{eaaf3e72-1611-4ff3-836f-6a6032c62037}</Project>
-      <Name>Symbion</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="app.config" />
-    <None Include="Models\SymBank.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>SymBank.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="Properties\SymBank.pfx" />
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Models\SymBank.dbml.layout">
-      <DependentUpon>SymBank.dbml</DependentUpon>
-    </None>
+    <Compile Include="ServiceAttribute.cs" />
+    <Compile Include="ServiceRepository.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

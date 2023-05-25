@@ -1,6 +1,7 @@
 ﻿using SymBank.Properties;
 using Symbion;
 using System;
+using System.Globalization;
 using System.Security.Principal;
 using System.Threading;
 using System.Windows.Forms;
@@ -14,6 +15,7 @@ namespace SymBank {
 		private SplashScreen frmSplash;
 
 		private void ShellForm_Load(object sender, EventArgs e) {
+			Resources.Culture = CultureInfo.CurrentCulture;
 			frmSplash = new SplashScreen();
 			frmSplash.Show();
 			AppDomain.CurrentDomain.SetPrincipalPolicy(PrincipalPolicy.WindowsPrincipal);
