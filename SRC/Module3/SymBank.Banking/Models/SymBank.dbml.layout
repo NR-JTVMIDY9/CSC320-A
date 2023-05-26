@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="SymBank">
+  <DataContextMoniker Name="/SymBankDataContext" />
+  <nestedChildShapes>
+    <classShape Id="f30ade54-4af1-4ec3-806d-1ce68c7a4ad0" absoluteBounds="0.75, 1, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/SymBankDataContext/Account" />
+      <nestedChildShapes>
+        <elementListCompartment Id="38d5049c-2c5a-447f-8efe-c6effbfad2c3" absoluteBounds="0.765, 1.46, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="762a4702-2f93-43a9-9dcb-24b5dc0a37f9" absoluteBounds="3.5, 1.125, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/SymBankDataContext/Transaction" />
+      <nestedChildShapes>
+        <elementListCompartment Id="db8e3b17-6d60-4c1b-bb54-0101e03e8a7f" absoluteBounds="3.515, 1.585, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 2.20274983723958); (3.5 : 2.20274983723958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SymBankDataContext/Account/Account_Transaction" />
+      <nodes>
+        <classShapeMoniker Id="f30ade54-4af1-4ec3-806d-1ce68c7a4ad0" />
+        <classShapeMoniker Id="762a4702-2f93-43a9-9dcb-24b5dc0a37f9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 1.60137491861979); (3.5 : 1.60137491861979)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SymBankDataContext/Account/Account_Transaction1" />
+      <nodes>
+        <classShapeMoniker Id="f30ade54-4af1-4ec3-806d-1ce68c7a4ad0" />
+        <classShapeMoniker Id="762a4702-2f93-43a9-9dcb-24b5dc0a37f9" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

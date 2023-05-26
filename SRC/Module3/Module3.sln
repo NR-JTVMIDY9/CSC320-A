@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Symbion", "Symbion\Symbion.csproj", "{CC1F703A-CDE7-446E-A2F2-846F53B0C012}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Symbion.Loggers", "Symbion.Loggers\Symbion.Loggers.csproj", "{BB186CAB-17EB-4F4F-80F4-22D66DDFAB1C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SymBank.Banking", "SymBank.Banking\SymBank.Banking.csproj", "{4BA73678-4547-468B-A168-D155CADEF4E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SymBank", "SymBank\SymBank.csproj", "{14616EE8-A0CA-4055-9A64-FAC2B981BFAC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC1F703A-CDE7-446E-A2F2-846F53B0C012}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC1F703A-CDE7-446E-A2F2-846F53B0C012}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC1F703A-CDE7-446E-A2F2-846F53B0C012}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC1F703A-CDE7-446E-A2F2-846F53B0C012}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB186CAB-17EB-4F4F-80F4-22D66DDFAB1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB186CAB-17EB-4F4F-80F4-22D66DDFAB1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB186CAB-17EB-4F4F-80F4-22D66DDFAB1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB186CAB-17EB-4F4F-80F4-22D66DDFAB1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BA73678-4547-468B-A168-D155CADEF4E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BA73678-4547-468B-A168-D155CADEF4E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BA73678-4547-468B-A168-D155CADEF4E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BA73678-4547-468B-A168-D155CADEF4E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14616EE8-A0CA-4055-9A64-FAC2B981BFAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14616EE8-A0CA-4055-9A64-FAC2B981BFAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14616EE8-A0CA-4055-9A64-FAC2B981BFAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14616EE8-A0CA-4055-9A64-FAC2B981BFAC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

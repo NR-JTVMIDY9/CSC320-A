@@ -44,6 +44,7 @@
     <Compile Include="BaseLogger.cs" />
     <Compile Include="BaseModule.cs" />
     <Compile Include="BaseService.cs" />
+    <Compile Include="CryptoHelper.cs" />
     <Compile Include="DebugHelper.cs" />
     <Compile Include="DebugLogger.cs" />
     <Compile Include="IAuthorization.cs" />
