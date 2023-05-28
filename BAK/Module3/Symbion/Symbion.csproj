@@ -53,9 +53,24 @@
     <Compile Include="BaseLogger.cs" />
     <Compile Include="BaseModule.cs" />
     <Compile Include="BaseService.cs" />
+    <Compile Include="BaseView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BaseWorkspace.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Command.cs" />
     <Compile Include="DebugHelper.cs" />
     <Compile Include="DebugLogger.cs" />
+    <Compile Include="DeckButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DeckWorkspace.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DeckWorkspace.Designer.cs">
+      <DependentUpon>DeckWorkspace.cs</DependentUpon>
+    </Compile>
     <Compile Include="IActionSite.cs" />
     <Compile Include="IAuthorization.cs" />
     <Compile Include="ILogger.cs" />
@@ -63,6 +78,9 @@
     <Compile Include="InjectAttribute.cs" />
     <Compile Include="IService.cs" />
     <Compile Include="IShell.cs" />
+    <Compile Include="IView.cs" />
+    <Compile Include="IWebBrowserService.cs" />
+    <Compile Include="IWorkspace.cs" />
     <Compile Include="LoggerFactory.cs" />
     <Compile Include="LogType.cs" />
     <Compile Include="MenuActionSite.cs" />
@@ -78,15 +96,55 @@
     </Compile>
     <Compile Include="ServiceAttribute.cs" />
     <Compile Include="ServiceRepository.cs" />
+    <Compile Include="TabWorkspace.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabWorkspace.Designer.cs">
+      <DependentUpon>TabWorkspace.cs</DependentUpon>
+    </Compile>
     <Compile Include="ToolbarActionSite.cs" />
+    <Compile Include="WebBrowserService.cs" />
+    <Compile Include="WebBrowserView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WebBrowserView.Designer.cs">
+      <DependentUpon>WebBrowserView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowFrame.Designer.cs">
+      <DependentUpon>WindowFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowWorkspace.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WindowWorkspace.Designer.cs">
+      <DependentUpon>WindowWorkspace.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\Symbion.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="DeckWorkspace.resx">
+      <DependentUpon>DeckWorkspace.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabWorkspace.resx">
+      <DependentUpon>TabWorkspace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WebBrowserView.resx">
+      <DependentUpon>WebBrowserView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowFrame.resx">
+      <DependentUpon>WindowFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowWorkspace.resx">
+      <DependentUpon>WindowWorkspace.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

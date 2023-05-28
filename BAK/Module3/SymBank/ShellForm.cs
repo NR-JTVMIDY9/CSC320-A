@@ -10,16 +10,22 @@ namespace SymBank {
 	public partial class ShellForm : Form, IShell {
 
 		private Dictionary<string, IActionSite> _sites;
+		private Dictionary<string, IWorkspace> _workspaces;
 
 
 		public ShellForm() {
 			InitializeComponent();
 			_sites = new Dictionary<string, IActionSite>();
+			_workspaces = new Dictionary<string, IWorkspace>();
+			_workspaces.Add("TabSpace", tabWorkspace);
+			_workspaces.Add("WindowSpace", windowWorkspace);
+			_workspaces.Add("DeckSpace", deckWorkspace);
 			_sites.Add("FileMenu", new MenuActionSite(mnuFile));
 			_sites.Add("ToolsMenu", new MenuActionSite(mnuTools));
 			_sites.Add("Toolbar", new ToolbarActionSite(tbrMain));
 			_sites["FileMenu"].Add(ApplicationCommands.Exit);
 			_sites["Toolbar"].Add(ApplicationCommands.Exit);
+			this.Add<IShell>();
 		}
 
 		public Dictionary<string, IActionSite> Sites {
@@ -44,6 +50,11 @@ namespace SymBank {
 			frmSplash.Close();
 			frmSplash = null;
 			Status = null;
+			WebBrowserService wbs = new WebBrowserService();
+			wbs.Add<IWebBrowserService>();
+			wbs.Open("http://www.microsoft.com", "DeckSpace");
+			wbs.Open("http://www.google.com", "DeckSpace");
+			wbs.Open("http://www.hotmail.com", "DeckSpace");
 		}
 
 		private void ShellForm_FormClosed(object sender, FormClosedEventArgs e) {
@@ -75,6 +86,12 @@ namespace SymBank {
 					sbrMain.Refresh();
 				}
 				else frmSplash.Status = value;
+			}
+		}
+
+		public Dictionary<string, IWorkspace> Workspaces {
+			get {
+				return _workspaces;
 			}
 		}
 	}
