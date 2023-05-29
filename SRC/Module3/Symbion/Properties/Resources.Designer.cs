@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SymBank.Properties {
+namespace Symbion.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace SymBank.Properties {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SymBank.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Symbion.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -63,6 +63,16 @@ namespace SymBank.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap ApplicationGo {
+            get {
+                object obj = ResourceManager.GetObject("ApplicationGo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Cancel {
             get {
                 object obj = ResourceManager.GetObject("Cancel", resourceCulture);
@@ -71,11 +81,38 @@ namespace SymBank.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Confirmation.
+        ///   Looks up a localized string similar to Cannot find class {0} in module {1}..
         /// </summary>
-        public static string Confirm {
+        public static string CannotFindClassInModule {
             get {
-                return ResourceManager.GetString("Confirm", resourceCulture);
+                return ResourceManager.GetString("CannotFindClassInModule", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cannot locate module {0}..
+        /// </summary>
+        public static string CannotLocateModule {
+            get {
+                return ResourceManager.GetString("CannotLocateModule", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Error &apos;{0}&apos; instancing {1} in module {2}..
+        /// </summary>
+        public static string ErrorInstancingClassInModule {
+            get {
+                return ResourceManager.GetString("ErrorInstancingClassInModule", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Error &apos;{0}&apos; occurred loading module {1}..
+        /// </summary>
+        public static string ErrorLoadingModule {
+            get {
+                return ResourceManager.GetString("ErrorLoadingModule", resourceCulture);
             }
         }
         
@@ -89,65 +126,50 @@ namespace SymBank.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Error.
+        ///   Looks up a localized string similar to Module {0} loaded successfully..
         /// </summary>
-        public static string Failure {
+        public static string ModuleLoaded {
             get {
-                return ResourceManager.GetString("Failure", resourceCulture);
+                return ResourceManager.GetString("ModuleLoaded", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Initializing modules....
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static string InitializingModules {
+        public static System.Drawing.Bitmap Next {
             get {
-                return ResourceManager.GetString("InitializingModules", resourceCulture);
+                object obj = ResourceManager.GetObject("Next", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Loading modules....
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static string LoadingModules {
+        public static System.Drawing.Bitmap Previous {
             get {
-                return ResourceManager.GetString("LoadingModules", resourceCulture);
+                object obj = ResourceManager.GetObject("Previous", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Please Wait....
+        ///   Looks up a localized string similar to User not authorized for module {0}..
         /// </summary>
-        public static string PleaseWait {
+        public static string UserNotAuthorizedForModule {
             get {
-                return ResourceManager.GetString("PleaseWait", resourceCulture);
+                return ResourceManager.GetString("UserNotAuthorizedForModule", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ready..
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static string Ready {
+        public static System.Drawing.Bitmap World {
             get {
-                return ResourceManager.GetString("Ready", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Information.
-        /// </summary>
-        public static string Success {
-            get {
-                return ResourceManager.GetString("Success", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Alert.
-        /// </summary>
-        public static string Warning {
-            get {
-                return ResourceManager.GetString("Warning", resourceCulture);
+                object obj = ResourceManager.GetObject("World", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

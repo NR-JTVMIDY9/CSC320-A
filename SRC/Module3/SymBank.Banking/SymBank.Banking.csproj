@@ -71,7 +71,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Models\SymBank.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>SymBank.designer.cs</LastGenOutput>
