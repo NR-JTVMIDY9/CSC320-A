@@ -1,8 +1,15 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Reflection;
+using System.Threading;
 
 namespace Symbion {
 	public static class DebugHelper {
+		[Conditional("DEBUG")]
+		public static void Delay(int milliseconds) {
+			Thread.Sleep(milliseconds);
+		}
+
 		public static void ShowLoadedAssemblies() {
 			AppDomain domain = AppDomain.CurrentDomain;
 			Assembly[] assemblies = domain.GetAssemblies();

@@ -118,34 +118,40 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ApplicationGo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\application_go.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Confirm" xml:space="preserve">
-    <value>Confirmation</value>
+  <data name="CannotFindClassInModule" xml:space="preserve">
+    <value>Cannot find class {0} in module {1}.</value>
+  </data>
+  <data name="CannotLocateModule" xml:space="preserve">
+    <value>Cannot locate module {0}.</value>
+  </data>
+  <data name="ErrorInstancingClassInModule" xml:space="preserve">
+    <value>Error '{0}' instancing {1} in module {2}.</value>
+  </data>
+  <data name="ErrorLoadingModule" xml:space="preserve">
+    <value>Error '{0}' occurred loading module {1}.</value>
   </data>
   <data name="Exit" xml:space="preserve">
     <value>E&amp;xit</value>
   </data>
-  <data name="Failure" xml:space="preserve">
-    <value>Error</value>
+  <data name="ModuleLoaded" xml:space="preserve">
+    <value>Module {0} loaded successfully.</value>
   </data>
-  <data name="InitializingModules" xml:space="preserve">
-    <value>Initializing modules...</value>
+  <data name="Next" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\next.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LoadingModules" xml:space="preserve">
-    <value>Loading modules...</value>
+  <data name="Previous" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\previous.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PleaseWait" xml:space="preserve">
-    <value>Please Wait...</value>
+  <data name="UserNotAuthorizedForModule" xml:space="preserve">
+    <value>User not authorized for module {0}.</value>
   </data>
-  <data name="Ready" xml:space="preserve">
-    <value>Ready.</value>
-  </data>
-  <data name="Success" xml:space="preserve">
-    <value>Information</value>
-  </data>
-  <data name="Warning" xml:space="preserve">
-    <value>Alert</value>
+  <data name="World" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\world.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

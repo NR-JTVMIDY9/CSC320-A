@@ -39,6 +39,8 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,30 +49,107 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationCommands.cs" />
     <Compile Include="BaseLogger.cs" />
     <Compile Include="BaseModule.cs" />
     <Compile Include="BaseService.cs" />
+    <Compile Include="BaseView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BaseWorkspace.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Command.cs" />
     <Compile Include="CryptoHelper.cs" />
     <Compile Include="DebugHelper.cs" />
     <Compile Include="DebugLogger.cs" />
+    <Compile Include="IActionSite.cs" />
     <Compile Include="IAuthorization.cs" />
     <Compile Include="ILogger.cs" />
     <Compile Include="IModule.cs" />
     <Compile Include="InjectAttribute.cs" />
     <Compile Include="IService.cs" />
     <Compile Include="IShell.cs" />
+    <Compile Include="IView.cs" />
+    <Compile Include="IWebBrowserService.cs" />
+    <Compile Include="IWorkspace.cs" />
     <Compile Include="LoggerFactory.cs" />
     <Compile Include="LogType.cs" />
+    <Compile Include="MenuActionSite.cs" />
     <Compile Include="ModuleItem.cs" />
     <Compile Include="ModuleList.cs" />
     <Compile Include="ModuleLoader.cs" />
     <Compile Include="PrincipalAuthorization.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="ServiceAttribute.cs" />
     <Compile Include="ServiceRepository.cs" />
+    <Compile Include="TabWorkspace.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabWorkspace.Designer.cs">
+      <DependentUpon>TabWorkspace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolbarActionSite.cs" />
+    <Compile Include="WebBrowserService.cs" />
+    <Compile Include="WebBrowserView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WebBrowserView.Designer.cs">
+      <DependentUpon>WebBrowserView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowFrame.Designer.cs">
+      <DependentUpon>WindowFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowWorkspace.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WindowWorkspace.Designer.cs">
+      <DependentUpon>WindowWorkspace.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\Symbion.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabWorkspace.resx">
+      <DependentUpon>TabWorkspace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WebBrowserView.resx">
+      <DependentUpon>WebBrowserView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowFrame.resx">
+      <DependentUpon>WindowFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowWorkspace.resx">
+      <DependentUpon>WindowWorkspace.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\previous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\world.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application_go.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

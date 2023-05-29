@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Symbion.Properties;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Globalization;
 using System.IO;
 using System.Reflection;
 
@@ -24,14 +26,17 @@ namespace Symbion {
 					if (item.Roles.Count > 0 &&
 						!auth.IsInAnyRoles(item.Roles)) {
 						Debug.WriteLine(string.Format(
-							"User not authorized for module {0}.",
+							CultureInfo.CurrentCulture,
+							Resources.UserNotAuthorizedForModule,
 							item.Path));
 						continue;
 					}
 				}
 				if (!File.Exists(item.Path)) {
 					logger.Failure(string.Format(
-						"Cannot locate module {0}.", item.Path));
+						CultureInfo.CurrentCulture,
+						Resources.CannotLocateModule,
+						item.Path));
 					continue;
 				}
 				Assembly assembly = null;
@@ -40,14 +45,16 @@ namespace Symbion {
 				} 
 				catch (Exception ex) {
 					logger.Failure(string.Format(
-						"Error '{0}' occurred in module {1}.",
+						CultureInfo.CurrentCulture,
+						Resources.ErrorLoadingModule,
 						ex.Message, item.Path));
 					continue;
 				}
 				Type moduleType = assembly.GetType(item.Name);
 				if (moduleType == null) {
 					logger.Failure(string.Format(
-						"Cannot find class {0} in module {1}.",
+						CultureInfo.CurrentCulture,
+						Resources.CannotFindClassInModule,
 						item.Name, item.Path));
 					continue;
 				}
@@ -55,11 +62,13 @@ namespace Symbion {
 					var module = (IModule)Activator.CreateInstance(moduleType);
 					_modules.Add(module);
 					Debug.WriteLine(string.Format(
-						"Module {0} loaded successfully.", item.Path));
+						CultureInfo.CurrentCulture,
+						Resources.ModuleLoaded, item.Path));
 				}
 				catch (Exception ex) {
 					logger.Failure(string.Format(
-						"Error '{0}' instancing {1} in module {2}.",
+						CultureInfo.CurrentCulture,
+						Resources.ErrorInstancingClassInModule,
 						ex.Message, item.Name, item.Path));
 					continue;
 				}
