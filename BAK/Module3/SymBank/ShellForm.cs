@@ -23,8 +23,6 @@ namespace SymBank {
 			_sites.Add("FileMenu", new MenuActionSite(mnuFile));
 			_sites.Add("ToolsMenu", new MenuActionSite(mnuTools));
 			_sites.Add("Toolbar", new ToolbarActionSite(tbrMain));
-			_sites["FileMenu"].Add(ApplicationCommands.Exit);
-			_sites["Toolbar"].Add(ApplicationCommands.Exit);
 			this.Add<IShell>();
 		}
 
@@ -52,9 +50,11 @@ namespace SymBank {
 			Status = null;
 			WebBrowserService wbs = new WebBrowserService();
 			wbs.Add<IWebBrowserService>();
-			wbs.Open("http://www.microsoft.com", "DeckSpace");
-			wbs.Open("http://www.google.com", "DeckSpace");
-			wbs.Open("http://www.hotmail.com", "DeckSpace");
+			//wbs.Open("http://www.microsoft.com", "DeckSpace");
+			//wbs.Open("http://www.google.com", "DeckSpace");
+			//wbs.Open("http://www.hotmail.com", "DeckSpace");
+			_sites["FileMenu"].Add(ApplicationCommands.Exit);
+			_sites["Toolbar"].Add(ApplicationCommands.Exit);
 		}
 
 		private void ShellForm_FormClosed(object sender, FormClosedEventArgs e) {

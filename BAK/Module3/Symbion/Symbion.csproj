@@ -103,6 +103,8 @@
       <DependentUpon>TabWorkspace.cs</DependentUpon>
     </Compile>
     <Compile Include="ToolbarActionSite.cs" />
+    <Compile Include="Validation.cs" />
+    <Compile Include="ValidationException.cs" />
     <Compile Include="WebBrowserService.cs" />
     <Compile Include="WebBrowserView.cs">
       <SubType>UserControl</SubType>
