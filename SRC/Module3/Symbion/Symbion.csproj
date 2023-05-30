@@ -63,6 +63,15 @@
     <Compile Include="CryptoHelper.cs" />
     <Compile Include="DebugHelper.cs" />
     <Compile Include="DebugLogger.cs" />
+    <Compile Include="DeckButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DeckWorkspace.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DeckWorkspace.Designer.cs">
+      <DependentUpon>DeckWorkspace.cs</DependentUpon>
+    </Compile>
     <Compile Include="IActionSite.cs" />
     <Compile Include="IAuthorization.cs" />
     <Compile Include="ILogger.cs" />
@@ -95,6 +104,8 @@
       <DependentUpon>TabWorkspace.cs</DependentUpon>
     </Compile>
     <Compile Include="ToolbarActionSite.cs" />
+    <Compile Include="Validation.cs" />
+    <Compile Include="ValidationException.cs" />
     <Compile Include="WebBrowserService.cs" />
     <Compile Include="WebBrowserView.cs">
       <SubType>UserControl</SubType>
@@ -119,6 +130,9 @@
     <None Include="Properties\Symbion.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="DeckWorkspace.resx">
+      <DependentUpon>DeckWorkspace.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

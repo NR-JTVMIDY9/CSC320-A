@@ -91,6 +91,14 @@ namespace SymBank.Banking.Models
 			return ((int)(result.ReturnValue));
 		}
 		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.AccountTransfer")]
+		public int AccountTransfer([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Source", DbType="Int")] System.Nullable<int> source, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Target", DbType="Int")] System.Nullable<int> target, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Amount", DbType="Money")] System.Nullable<decimal> amount, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Creator", DbType="NVarChar(30)")] string creator, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created", DbType="DateTime")] System.Nullable<System.DateTime> created, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Code", DbType="Int")] ref System.Nullable<int> code)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), source, target, amount, creator, created, code);
+			code = ((System.Nullable<int>)(result.GetParameterValue(5)));
+			return ((int)(result.ReturnValue));
+		}
+		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.AccountCredit")]
 		public int AccountCredit([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Source", DbType="Int")] System.Nullable<int> source, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Amount", DbType="Money")] System.Nullable<decimal> amount, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Creator", DbType="NVarChar(30)")] string creator, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created", DbType="DateTime")] System.Nullable<System.DateTime> created, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Code", DbType="Int")] ref System.Nullable<int> code)
 		{
@@ -106,14 +114,6 @@ namespace SymBank.Banking.Models
 			code = ((System.Nullable<int>)(result.GetParameterValue(4)));
 			return ((int)(result.ReturnValue));
 		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.AccountTransfer")]
-		public int AccountTransfer([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Source", DbType="Int")] System.Nullable<int> source, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Target", DbType="Int")] System.Nullable<int> target, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Amount", DbType="Money")] System.Nullable<decimal> amount, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Creator", DbType="NVarChar(30)")] string creator, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created", DbType="DateTime")] System.Nullable<System.DateTime> created, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Code", DbType="Int")] ref System.Nullable<int> code)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), source, target, amount, creator, created, code);
-			code = ((System.Nullable<int>)(result.GetParameterValue(5)));
-			return ((int)(result.ReturnValue));
-		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Accounts")]
@@ -124,7 +124,7 @@ namespace SymBank.Banking.Models
 		
 		private int _Code;
 		
-		private int _Type;
+		private AccountType _Type;
 		
 		private string _Name;
 		
@@ -150,7 +150,7 @@ namespace SymBank.Banking.Models
     partial void OnCreated();
     partial void OnCodeChanging(int value);
     partial void OnCodeChanged();
-    partial void OnTypeChanging(int value);
+    partial void OnTypeChanging(AccountType value);
     partial void OnTypeChanged();
     partial void OnNameChanging(string value);
     partial void OnNameChanged();
@@ -195,8 +195,8 @@ namespace SymBank.Banking.Models
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Type", DbType="Int NOT NULL")]
-		public int Type
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Type", DbType="Int NOT NULL", CanBeNull=false)]
+		public AccountType Type
 		{
 			get
 			{

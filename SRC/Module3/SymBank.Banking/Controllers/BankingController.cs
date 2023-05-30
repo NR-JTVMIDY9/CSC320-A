@@ -25,7 +25,7 @@ namespace SymBank.Banking.Controllers {
 
 		public void Add(Account account) {
 			var dc = new SymBankDataContext();
-			dc.AccountAdd(account.Code, account.Type,
+			dc.AccountAdd(account.Code, (int)account.Type,
 				account.Name, account.ZipCode, Authorization.UserName,
 				DateTime.Now, account.Balance, null);
 		}
